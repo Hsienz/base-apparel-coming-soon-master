@@ -13,21 +13,28 @@ const Card = () => {
 		);
 		if (!ok) {
 			elem = document.getElementById("email");
-			if (!elem?.classList.contains("error")) elem?.classList.add("error");
+			if (!elem?.classList.contains("error"))
+				elem?.classList.add("error");
 			elem = document.getElementById("errorMsg");
-			if (!elem?.classList.contains("error")) elem?.classList.add("error");
+			if (!elem?.classList.contains("error"))
+				elem?.classList.add("error");
+			elem = document.getElementById("iconError");
+			if (!elem?.classList.contains("error"))
+				elem?.classList.add("error");
 		}
 		elem = document.getElementById("email");
-		(elem as HTMLInputElement).value = ""
+		(elem as HTMLInputElement).value = "";
 	};
 	const handleInputOnClick = () => {
 		let elem = document.getElementById("email");
 		if (elem?.classList.contains("error")) elem?.classList.remove("error");
 		elem = document.getElementById("errorMsg");
 		if (elem?.classList.contains("error")) elem?.classList.remove("error");
+		elem = document.getElementById("iconError");
+		if (elem?.classList.contains("error")) elem?.classList.remove("error");
 	};
 	return (
-		<main className="flex flex-col w-full px-12 h-[90%] max-w-[720px] my-4">
+		<main className="flex flex-col w-full px-12 h-[90%] max-w-[720px] min-w-[320px] my-4">
 			<div>
 				<img src={logo} alt="" />
 			</div>
@@ -52,7 +59,7 @@ const Card = () => {
 				<div className="w-full h-16 relative">
 					<input
 						id="email"
-                        onClick={handleInputOnClick}
+						onClick={handleInputOnClick}
 						placeholder="Email Address"
 						className="w-full h-full rounded-full placeholder:text-Desaturated_Red border-Desaturated_Red border-solid border-2 px-8 text-lg bg-transparent outline-none text-Dark_Grayish_Red"
 					></input>
@@ -65,6 +72,12 @@ const Card = () => {
 								className="h-1/2 self-center"
 								src={iconArrow}
 								alt=""
+							/>
+							<img
+                                id="iconError"
+								src={iconError}
+								alt=""
+								className="absolute -left-8 hidden"
 							/>
 						</div>
 					</button>
