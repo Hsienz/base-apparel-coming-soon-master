@@ -1,6 +1,5 @@
 import heroMobile from "./assets/hero-mobile.jpg";
 import heroDesktop from "./assets/hero-desktop.jpg";
-import bgPatternDesktop from "./assets/bg-pattern-desktop.svg";
 import iconArrow from "./assets/icon-arrow.svg";
 import iconError from "./assets/icon-error.svg";
 import logo from "./assets/logo.svg";
@@ -36,7 +35,7 @@ const Card = () => {
 	return (
 		<main
 			className="flex flex-col w-full px-12 h-[90%] max-w-[720px] min-w-[320px] my-4 
-		md:flex-row-reverse md:w-screen md:h-screen md:my-0 md:px-0 md:max-w-none md:min-h-[720px]"
+		md:flex-row-reverse md:w-screen md:h-screen md:my-0 md:px-0 md:max-w-none md:min-h-[720px] md:bg-[url('/src/assets/bg-pattern-desktop.svg')]"
 		>
 			<div className="hidden w-2/5 md:block">
 				<img src={heroDesktop} alt="" className="w-full h-full" />
