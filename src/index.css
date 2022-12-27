@@ -17,13 +17,4 @@
   * {
     @apply font-sans;
   }
-  #errorMsg.error {
-    @apply visible;
-  }
-  #email.error {
-    @apply border-Soft_Red;
-  }
-  #iconError.error {
-    @apply block;
-  }
 }/*# sourceMappingURL=index.css.map */
