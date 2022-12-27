@@ -35,10 +35,13 @@ const Card = () => {
 	};
 	return (
 		<main className="flex flex-col w-full px-12 h-[90%] max-w-[720px] min-w-[320px] my-4">
+            <div className="hidden">
+                <img src={heroDesktop} alt="" />
+            </div>
 			<div>
 				<img src={logo} alt="" />
 			</div>
-			<div className="w-auto -mx-12">
+			<div className="w-auto -mx-12 mt-10">
 				<img className="w-full" src={heroMobile} alt="" />
 			</div>
 			<div className="relative pt-16">
@@ -61,7 +64,7 @@ const Card = () => {
 						id="email"
 						onClick={handleInputOnClick}
 						placeholder="Email Address"
-						className="w-full h-full rounded-full placeholder:text-Desaturated_Red border-Desaturated_Red border-solid border-2 px-8 text-lg bg-transparent outline-none text-Dark_Grayish_Red"
+						className="w-full h-full rounded-full placeholder:text-Desaturated_Red placeholder:top-0.5 placeholder:relative border-Desaturated_Red border-solid border-2 px-8 text-lg bg-transparent outline-none text-Dark_Grayish_Red"
 					></input>
 					<button
 						onClick={handleBtnOnClick}
@@ -83,7 +86,7 @@ const Card = () => {
 					</button>
 				</div>
 				<p
-					className="invisible text-Soft_Red relative left-8 top-2"
+					className="invisible text-Soft_Red relative left-8 top-1"
 					id="errorMsg"
 				>
 					Please provide a valid email
