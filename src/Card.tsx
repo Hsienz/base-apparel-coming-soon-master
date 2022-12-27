@@ -72,8 +72,9 @@ const Card = () => {
 						<button
 							onClick={handleBtnOnClick}
 							className="hover:brightness-[120%] hover:shadow-xl absolute w-[25%] h-full rounded-full gradient1 right-0"
+							aria-label="submitBtn"
 						>
-							<div className="flex w-full justify-center">
+							<span className="flex w-full justify-center">
 								<img
 									className="h-1/2 self-center"
 									src={iconArrow}
@@ -85,7 +86,7 @@ const Card = () => {
 									alt=""
 									className="absolute -left-8 hidden"
 								/>
-							</div>
+							</span>
 						</button>
 					</div>
 					<p
